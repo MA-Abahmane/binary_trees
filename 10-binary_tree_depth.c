@@ -16,7 +16,7 @@ const binary_tree_t *ptr = tree;
 if (tree == NULL)
 return (0);
 
-/* check if node is 'root' */
+/* get to the 'root' */
 while (ptr->parent != NULL)
 {
 count++;
