@@ -2,27 +2,6 @@
 
 
 /**
- * recurser - a function that uses recursion to go through
- *  the the binary tree
- *
- * @node: given node to check
- *
- * Return: the hight of the binary tree
- */
-size_t recurser(const binary_tree_t *node)
-{
-/* count starts from 0 */
-if (node == NULL)
-return (0);
-
-size_t leftHight = recurser(node->left);
-size_t rightHight = recurser(node->right);
-/* count while going up */
-return (1 + (leftHight > rightHight ? leftHight : rightHight));
-}
-
-
-/**
  * binary_tree_height - a function that measures the height of a binary tree
  *
  * @tree: given node to check
@@ -31,9 +10,16 @@ return (1 + (leftHight > rightHight ? leftHight : rightHight));
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
+size_t leftHight = 0, rightHight = 0;
 
 if (tree == NULL)
 return (0);
 
-return (recurser(tree) - 1);
+if (tree->left)
+leftHight = binary_tree_height(tree->left) + 1;
+if (tree->right)
+rightHight = binary_tree_height(tree->right) + 1;
+
+/* count while going up */
+return (leftHight > rightHight ? leftHight : rightHight);
 }
