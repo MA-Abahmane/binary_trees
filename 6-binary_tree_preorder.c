@@ -7,7 +7,7 @@
  * @tree: binary tree to go through
  * @func: a pointer to a function to call for each node. The value in the
  *   node must be passed as a parameter to this function.
- * 
+ *
  * Return: If tree or func is NULL, do nothing
  */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
@@ -16,12 +16,12 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 if (tree == NULL || func == NULL)
 return;
 
-// print node value
+/* rint node value */
 func(tree->n);
 
-// traverse the left child subtree
+/* raverse the left child subtree */
 binary_tree_preorder(tree->left, func);
 
-// traverse the right child subtree
+/* raverse the right child subtree */
 binary_tree_preorder(tree->right, func);
 }

@@ -17,16 +17,15 @@ return (0);
 
 size_t leftHight = recurser(node->left);
 size_t rightHight = recurser(node->right);
-
-// count while going up
-return 1 + (leftHight > rightHight ? leftHight: rightHight);
+/* count while going up */
+return (1 + (leftHight > rightHight ? leftHight : rightHight));
 }
 
 
 /**
  * binary_tree_height - a function that measures the height of a binary tree
  *
- * @node: given node to check
+ * @tree: given node to check
  *
  * Return: If tree is NULL, your function must return 0
  */
