@@ -22,7 +22,7 @@ ance = first;
 while (ance)
 {
 
-crnt = second->parent;
+crnt = second;
 while (crnt)
 {
 if (ance == crnt)
