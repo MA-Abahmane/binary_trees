@@ -11,20 +11,22 @@
  */
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 {
-binary_tree_t *pvt;
+binary_tree_t *ptr;
 
+/* The head node will always be the node on the right */
 if (tree == NULL || tree->right == NULL)
 return (NULL);
 
-pvt = tree->right;
-tree->right = pvt->left;
+/* rotate tree left by switching positions reverse clockwise*/
+ptr = tree->right;
+tree->right = ptr->left;
 
-if (pvt->left != NULL)
-pvt->left->parent = tree;
+if (ptr->left != NULL)
+ptr->left->parent = tree;
 
-pvt->left = tree;
-pvt->parent = tree->parent;
+ptr->left = tree;
+ptr->parent = tree->parent;
 
-tree->parent = pvt;
-return (pvt);
+tree->parent = ptr;
+return (ptr);
 }
