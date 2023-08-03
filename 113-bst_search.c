@@ -1,17 +1,16 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_bst - a function that checks if a binary tree
+ * bst_search - a function that checks if a binary tree
  *  is a valid Binary Search Tree
  *
  * @tree: binary tree to go through
  *
  * Return: If tree is NULL, do nothing
  */
-int binary_tree_is_bst(const binary_tree_t *tree)
+bst_t *bst_search(const bst_t *tree, int value)
 {
-if (tree == NULL)
-return (0);
-
-return (1);
+(void)value;
+if (tree == NULL || value == NULL)
+return (NULL);
 }
