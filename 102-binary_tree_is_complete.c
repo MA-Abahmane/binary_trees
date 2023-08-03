@@ -1,7 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_complete - a function that checks if a binary tree is complete
+ * binary_tree_is_complete - a function that checks if a binary
+ *   tree is complete
  *
  * @tree: binary tree to go through
  *
