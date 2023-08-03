@@ -11,7 +11,7 @@
  */
 bst_t *bst_search(const bst_t *tree, int value)
 {
+(void)tree;
 (void)value;
-if (tree == NULL || value == NULL)
 return (NULL);
 }
