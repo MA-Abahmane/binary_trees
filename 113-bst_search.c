@@ -5,6 +5,7 @@
  *  is a valid Binary Search Tree
  *
  * @tree: binary tree to go through
+ * @value: value
  *
  * Return: If tree is NULL, do nothing
  */
